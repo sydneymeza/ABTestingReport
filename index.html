@@ -1,32 +1,173 @@
-  <!-- TO RUN IN BROWSER:
+<!-- TO RUN IN BROWSER:
     1. Install vscode extension Name: open in `browser open-in-browser` by TechER
     2. Right click html file and either run in default browser or another browser
   -->
-
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML/CSS Studio</title>
+    <title>AB Testing Report</title>
     <!-- import CSS styles -->
-    <link rel="stylesheet" href="styles.css" /> 
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <!-- page content goes into <body> -->
   <body>
     <div id="logoBar">
-      <h1>Welcome to 100 Acre Wood!</h1>
-      <img id="siteLogo" alt="Pooh-bear site logo" src="./assets/Header.png"/>
-      <h3>We're glad you're here :D</h3>
+      <h1>AB Testing Assignment!</h1>
+      <h2>:D</h2>
     </div>
-    <hr/>
-    <div id="staffGallery">
-      <img class="galleryImage" src="./assets/Eeyore-Eh.png"/>
-      <img class="galleryImage" src="./assets/Eeyore-Zz.png"/>
-      <img class="galleryImage" src="./assets/Kanga-Roo.png"/>
-      <img class="galleryImage" src="./assets/Owl-Phone.png"/>
+    <hr />
+    <div id="Overview">
+      <h1>Overview</h1>
+      <p>
+        Actually finding how effecitive a small change can make is very
+        difficult, luckily we cant use AB testing/statistics to do this. For
+        this assignment I was able to test two differnt interfaces, one that was
+        prepared for me to use, and the other is the one with the changes that I
+        made. This was a great opportunity to learn about AB testing and see
+        what information can be found from using statistics and different
+        methods.
+      </p>
+      <p>
+        The parts of the website that I chose to redesign include changing the
+        colors, of the buttons, the arrangment of the buttons, the arrangement
+        of the appointment details, and the arrangement of the appointments
+        themselves I wanted to change the button colors t omake it more clear
+        which button was the'make an appointment' button, and which one was to
+        view the details. I also changed the arrangement so that the buttons
+        were in a row rather than set in a column. The reasoning behind this was
+        to allow for more clickable space so that there are no accidental
+        clicks. I rearranged the appointment details by having the doctor's name
+        be the first detail that is seen, it's now the appointment header rather
+        than what type of appointment it is. I rearranged the appointments by
+        having them be in ascending order by dates rather than a bunch of dates
+        mixed up. I had this idea so that it would be easier to see the dates in
+        order.
+      </p>
+    </div>
+    <div id="part1">
+      <h1>Data Collection</h1>
+      <p>
+        I took part and my classmates took part in this AB testing assignment.
+        We first all 'tested' the A verison of the interface by being assigned a
+        task, which was to schedule an appointment with a specific doctor, on a
+        specific day, in a specific place. All my classmates were assigned the
+        same tasks and that is where the data comes for the A version. After I
+        was able to make changes to the website, and then we tested each others
+        websites, so the same people tested both version A and B of this test.
+      </p>
+      <div class="photos">
+        <img
+          alt="image of the Menominee website in the full desktop screen only contrast and some other design choices look off"
+          src="./assets/site.jpg"
+        />
+      </div>
+      <p>Here is the data that was collected:</p>
+      <div class="photos">
+        <img
+          alt="image of the Menominee website this time the browser window shrunken so that test is overlapping the whole navbar cannot be accessed"
+          src="./assets/not_responsive_sc.jpg"
+        />
+      </div>
+      <p>What each of these columns represent is ......</p>
+    </div>
+    <div id="part2">
+      <h1>Hypothesis</h1>
+      <p>
+        The data points that I chose to create hypothesis for include, the
+        misclick rate, the time spent on page, and the total distance (in
+        pixels) that the mouse moved.
+      </p>
+
+      <table>
+        <tr>
+          <th></th>
+          <th>Misclick</th>
+          <th>Time Spent on Page</th>
+          <th>Mouse Movement Distance</th>
+        </tr>
+        <tr>
+          <th>Null Hypothesis</th>
+          <td>Centro comercial Moctezuma</td>
+          <td>Francisco Chang</td>
+          <td>Mexico</td>
+        </tr>
+        <tr>
+          <th>Alternative Hypothesis</th>
+          <td>Centro comercial Moctezuma</td>
+          <td>Francisco Chang</td>
+          <td>Mexico</td>
+        </tr>
+      </table>
+      <div class="photos">
+        <img
+          alt="image of a regular white paper that has been folded into 9 squares. It has a different sketch in red pen on each square, some designs are more similar to each other than others."
+          src="./assets/nine_sketches.jpg"
+        />
+        <img
+          alt="image of a handdrawn final sketch. It is messy but a more well thought out idea than the sketches"
+          src="./assets/final_sketch.jpg"
+        />
+      </div>
+      <div id="part3">
+        <h1>Analysis</h1>
+        <h2>Misclick Rate</h2>
+        <p>
+          The type of test that I chose to use for this metric is the two-tailed
+          test. I thought that this would be the best test for this metric
+          because I wanted to compare the two averages. I know that since both
+          variables are continuous then ...
+
+          <br />
+          The average percent of people that made a misclick for version A is
+          26%. The percent of people that made a misclick on version B is 4%.
+          The p-value is 0.04 which is less than then alpha thus we can reject
+          the null hypothesis.
+        </p>
+        <p></p>
+        <h2>Time spent on Page</h2>
+        <p>
+          The type of test that I chose to use for this metric is the two-tailed
+          test. I thought that this would be the best test for this metric
+          because I wanted to compare the two averages. I know that since both
+          variables are continuous then ...
+
+          <br />
+          The average time spent on the page of version A is ____. The average
+          time spent on the page of version A is ____. The p-value is 0.04 which
+          is less than then alpha thus we can reject the null hypothesis.
+        </p>
+        <h2>Distance of mouse movement (in pixels)</h2>
+        <p>
+          The type of test that I chose to use for this metric is the two-tailed
+          test. I thought that this would be the best test for this metric
+          because I wanted to compare the two averages. I know that since both
+          variables are continuous then ...
+
+          <br />
+          The average mouse movement distance of version A is ___ pixels. The
+          average mouse movement distance of version B is ___ pixels. The
+          p-value is 0.04 which is less than then alpha thus we can reject the
+          null hypothesis.
+        </p>
+      </div>
+    </div>
+
+    <div id="part4">
+      <h1>Conclusion</h1>
+      <p>
+        While I didn't use a variety of test, I feel comfortable using the tests
+        that I did do to analyze A/B testing. I hope to learn more about the
+        other tests in the future so that I can use the data more extensively.
+        As the tests that I did for this assignment were informative, but I
+        believe that there is other information that I could have seen had I
+        analyzed or tested the data in a different way.
+        <a href="https://sydneymeza.github.io/ResponsiveRedesign/">here!</a> And
+        the original can be found
+        <a href="https://www.menominee-nsn.gov/">here!</a>
+      </p>
     </div>
   </body>
-
 </html>
