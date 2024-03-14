@@ -60,18 +60,50 @@
       </p>
       <div class="photos">
         <img
-          alt="image of the Menominee website in the full desktop screen only contrast and some other design choices look off"
-          src="./assets/site.jpg"
+          alt="image of version B of the website, or the website that I made changes to"
+          src="./assets/versionB.jpg"
         />
       </div>
       <p>Here is the data that was collected:</p>
       <div class="photos">
         <img
-          alt="image of the Menominee website this time the browser window shrunken so that test is overlapping the whole navbar cannot be accessed"
-          src="./assets/not_responsive_sc.jpg"
+          alt="image of the csv file that contains data for the version A testing, it contains columns with uid, version, timestamp_load, time_on_page, time_to_first_click, mouse_move_distance, num_clicks, did_misclick, did_succeed"
+          src="./assets/versionA_data.jpg"
+        />
+        <img
+          alt="image of the csv file that contains data for the version B testing, it contains columns with uid, version, timestamp_load, time_on_page, time_to_first_click, mouse_move_distance, num_clicks, did_misclick, did_succeed"
+          src="./assets/versionB_data.jpg"
         />
       </div>
-      <p>What each of these columns represent is ......</p>
+      <p>What each of these columns represent is:</p>
+      <li>uid: Unique identifier for each user.</li>
+      <li>
+        version: Version (A or B) of the website that the user interacted with.
+      </li>
+      <li>
+        timestamp_load: The time (in milliseconds) elapsed since the epoch.
+      </li>
+      <li>
+        time_on_page: Total time (in milliseconds) that the user spent on the
+        page.
+      </li>
+      <li>
+        time_to_first_click: The time (in milliseconds) it took for the user to
+        execute his/her first click.
+      </li>
+      <li>
+        mouse_move_distance: The total distance (in pixels) of the user’s mouse
+        movements.
+      </li>
+      <li>num_clicks: The number of times the user clicked on the screen.</li>
+      <li>
+        did_misclick: A boolean flag indicating if the user pushed a button
+        external to the task.
+      </li>
+      <li>
+        did_succeed: A boolean flag indicating if the user successfully
+        completed the task.
+      </li>
     </div>
     <div id="part2">
       <h1>Hypothesis</h1>
@@ -90,67 +122,125 @@
         </tr>
         <tr>
           <th>Null Hypothesis</th>
-          <td>Centro comercial Moctezuma</td>
-          <td>Francisco Chang</td>
-          <td>Mexico</td>
+          <td>The rate of misclick is the same for both versions</td>
+          <td>
+            The average time spent on the page are the same for both versions
+          </td>
+          <td>
+            The average mouse movement distance of each user is the same for
+            both versions
+          </td>
         </tr>
         <tr>
           <th>Alternative Hypothesis</th>
-          <td>Centro comercial Moctezuma</td>
-          <td>Francisco Chang</td>
-          <td>Mexico</td>
+          <td>Version B has a lower rate of misclicks than version A</td>
+          <td>
+            Version B has a lower time spent on page average than version A
+          </td>
+          <td>
+            Version B has a lower average mouse movement distance average than
+            version A
+          </td>
         </tr>
       </table>
-      <div class="photos">
-        <img
-          alt="image of a regular white paper that has been folded into 9 squares. It has a different sketch in red pen on each square, some designs are more similar to each other than others."
-          src="./assets/nine_sketches.jpg"
-        />
-        <img
-          alt="image of a handdrawn final sketch. It is messy but a more well thought out idea than the sketches"
-          src="./assets/final_sketch.jpg"
-        />
-      </div>
       <div id="part3">
         <h1>Analysis</h1>
         <h2>Misclick Rate</h2>
         <p>
+          The reasoning behind the alternative hypothesis is because I made the
+          clickable area larger and I made the contrast between the two buttons
+          more noticeable, I hope that this will create a noticeable difference
+          between the two versions.
+        </p>
+        <p>
+          For the misclick rate I do predict that I will be able to reject the
+          null hypothesis.
+        </p>
+        <p>
           The type of test that I chose to use for this metric is the two-tailed
-          test. I thought that this would be the best test for this metric
-          because I wanted to compare the two averages. I know that since both
-          variables are continuous then ...
+          T test. I thought that this would be the best test for this metric
+          because I wanted to compare the two averages. I know that since I'm
+          simply comparing whether or not one average is different from the
+          other average, I could have thought of another way to compare, or to test the misclicks, but this is what made most sense to me. 
 
           <br />
           The average percent of people that made a misclick for version A is
-          26%. The percent of people that made a misclick on version B is 4%.
+          26%. The percent of people that made a misclick on version B is 4%. To find whether or not I can reject the null hypothesis, I chose to use the alpha value of 0.05. Thus to be able to reject the null hypothesis the p value from this test has to be less than the alpha value. 
+          After using the script given to me for the two-tailed t test, the p-value of the test is 0.04.
           The p-value is 0.04 which is less than then alpha thus we can reject
+          the null hypothesis. However this test did not show that there is significant difference between the two versions. 
+        </p>
+        <h2>Time spent on Page</h2>
+        <p>
+          The reasoning behind the alternative hypothesis is because I hopefully
+          made the page easier to scan. I highlighted the dates, and put them in
+          an easier order to read, and I also changed the format of the
+          appointment details. Thus hopefully the time spent on the page is less
+          than version A because the user will have an easier time scanning the
+          page for the information that they need.
+        </p>
+        <p>
+          For the time spent on page I do predict that I will be able to reject
           the null hypothesis.
         </p>
-        <p></p>
-        <h2>Time spent on Page</h2>
         <p>
           The type of test that I chose to use for this metric is the two-tailed
           test. I thought that this would be the best test for this metric
-          because I wanted to compare the two averages. I know that since both
-          variables are continuous then ...
+          because I wanted to compare the two averages. I know that since I'm
+          simply comparing whether or not one average is different from the
+          other average, I could have thought of another way to compare, or to test the misclicks, but this is what made most sense to me. 
 
           <br />
-          The average time spent on the page of version A is ____. The average
-          time spent on the page of version A is ____. The p-value is 0.04 which
-          is less than then alpha thus we can reject the null hypothesis.
+          The average time spent on the page of version A is 24398.28 seconds. The average
+          time spent on the page of version B is 7799.29 seconds. To find whether or not I can reject the null hypothesis, I chose to use the alpha value of 0.05. Thus to be able to reject the null hypothesis the p value from this test has to be less than the alpha value. 
+          After using the script given to me for the two-tailed t test, the p-value of the test is 0.000035. The p-value is 0.000035 which is 
+          significantly less than then alpha thus we can reject the null hypothesis. There is a statistically significant different between the two. 
         </p>
         <h2>Distance of mouse movement (in pixels)</h2>
         <p>
+          The reasoning behind the alternative hypothesis is similar to the time
+          spent on page reasoning. Because users will hopefully spend less time
+          scanning, this means that they will also hopefully have a lower mouse
+          movement when they are scanning the page and searching for where to
+          click.
+        </p>
+        <p>
+          For the mouse movement distance I do predict that I will fail to reject the null
+          hypothesis.
+        </p>
+        <p>
           The type of test that I chose to use for this metric is the two-tailed
           test. I thought that this would be the best test for this metric
-          because I wanted to compare the two averages. I know that since both
-          variables are continuous then ...
+          because I wanted to compare the two averages. I know that since I'm
+          simply comparing whether or not one average is different from the
+          other average, I could have thought of another way to compare, or to test the distance, but this is what made most sense to me. 
 
           <br />
-          The average mouse movement distance of version A is ___ pixels. The
-          average mouse movement distance of version B is ___ pixels. The
-          p-value is 0.04 which is less than then alpha thus we can reject the
-          null hypothesis.
+          The average mouse movement distance of version A is 6458.7 pixels. The
+          average mouse movement distance of version B is 2340.3 pixels. To find whether or not I can reject the null hypothesis, I chose to use the alpha value of 0.05. Thus to be able to reject the null hypothesis the p value from this test has to be less than the alpha value. 
+          After using the script given to me for the two-tailed t test, the p-value of the test is 0.00014. The p-value is 0.00014 which is 
+          significantly less than then alpha thus we can reject the null hypothesis. There is a statistically significant different between the two versions. 
+          <br>
+          I didn't expect my prediction to be false, but I guess that the faster scanning patter allowed for smaller mouse movement distance. 
+        </p>
+      </div>
+    </div>
+    <div id="part3">
+        <h1>Summary Statistics</h1>
+        <h2>Misclick Rate</h2>
+        <p>
+          Since I collected about 20 data points, the average amount of people that misclicked in version A was about 26%. The variance is 20.1%. 
+          The average version B had was 4% with a variance of 4%. Thus version B has a significantly smaller misclick rate than version A.
+        </p>
+        <h2>Time spent on Page</h2>
+        <p>
+          Since I collected about 20 data points, the average user for version A had an average time of 24398.28 seconds. The variance is 206407623 seconds. 
+          The average user for version B had a mouse movement distance of about 7799.29 seconds. The variance is 4433968.91. Thus version B had an average time less than half the average of version A. 
+        </p>
+        <h2>Distance of mouse movement (in pixels)</h2>
+        <p>
+          Since I collected about 20 data points, the average user for version A had a mouse movement distance of about 6458.7 pixels. The variance is 15409604.8 pixels. 
+          The average user for version B had a mouse movement distance of about 2430.3 pixels. The variance is 410148.98 pixels. Thus version B had an average distance half the average of version A. 
         </p>
       </div>
     </div>
@@ -158,15 +248,12 @@
     <div id="part4">
       <h1>Conclusion</h1>
       <p>
-        While I didn't use a variety of test, I feel comfortable using the tests
-        that I did do to analyze A/B testing. I hope to learn more about the
-        other tests in the future so that I can use the data more extensively.
-        As the tests that I did for this assignment were informative, but I
-        believe that there is other information that I could have seen had I
-        analyzed or tested the data in a different way.
-        <a href="https://sydneymeza.github.io/ResponsiveRedesign/">here!</a> And
-        the original can be found
-        <a href="https://www.menominee-nsn.gov/">here!</a>
+        I feel comfortable using the tests that I did do to analyze A/B testing.
+        However since I didn't use a large variety of tests, I hope to learn
+        more about the other tests in the future so that I can use the data more
+        extensively. As the tests that I did for this assignment were
+        informative, but I believe that there is other information that I could
+        have seen had I analyzed or tested the data in a different way.
       </p>
     </div>
   </body>
